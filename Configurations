@@ -1,0 +1,6 @@
+directry for the application:
+  /home/<name>/app/IBM/WAS9/AppServer/profiles/AppSrv01
+release:
+  /home/<name>/app/IBM/WAS9/AppServer/profiles/AppSrv01/installedApps/Cell01
+temp files:
+  wstemp,workspace,tranlog,tranlog
