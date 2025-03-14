@@ -1,6 +1,32 @@
 directry for the application:
   /home/<name>/app/IBM/WAS9/AppServer/profiles/AppSrv01
-release:
+  here the profile we use in websphere is AppServer01. But inside that websphere profile we have to create a server for OMS. that is Server1.
+deployment path:
+  http://<IP>:9061/ibm/console > Applications > Application Types > WebSphere enterpriise applications>
+release situated when you deploy it from the consol:
   /home/<name>/app/IBM/WAS9/AppServer/profiles/AppSrv01/installedApps/Cell01
 temp files:
   wstemp,workspace,tranlog,tranlog
+start stop scripts:
+  cd /home/directfn/app/IBM/WAS9/AppServer/profiles/AppSrv01/bin
+  ./stopServer.sh server1
+  ./startServer.sh server1
+  when it starts success, the last msg will be like "Server <name> open for e-business; process id is <PID>"
+
+Server for oms:
+  http://<IP>:9061/ibm/console > Servers > Server Types> WevSphere application servers> select the server>
+Application ports:
+  http://<IP>:9061/ibm/console > Servers > Server Types> WevSphere application servers> select the server> Configurations tab> Communications > Ports
+  BOOTSTRAP_ADDRESS,PORT(2810) --> like 8080,1099 use to connect from other apps
+  ORB_LISTENER_ADDRESS,PORT(9100) --> used for TRS authentication
+  WC_defaulthost,PORT(9080) --> http
+  WC_defaulthost_secure,PORT(9443) --> https
+Heap memory add:
+  http://<IP>:9061/ibm/console > Servers > Server Types> WevSphere application servers> select the server> Configurations tab> Server Infrastructure > Process definition > Additional Properties > Java Virtual Machine
+App server config, add falcon, app id, port (JVM properties):
+  http://<IP>:9061/ibm/console > Servers > Server Types> WevSphere application servers> select the server> Configurations tab> Server Infrastructure > Process definition > Additional Properties > Java Virtual Machine > Custom properties
+  /home/directfn/app/IBM/WAS9/AppServer/profiles/AppSrv01/config/cells/Cell01/nodes/Node01/servers/server1/server.xml , resources.xml
+
+All connectivities:
+
+
