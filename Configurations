@@ -28,5 +28,16 @@ App server config, add falcon, app id, port (JVM properties):
   /home/directfn/app/IBM/WAS9/AppServer/profiles/AppSrv01/config/cells/Cell01/nodes/Node01/servers/server1/server.xml , resources.xml
 
 All connectivities:
+check the queue managers:
+  cd /opt/mqm/bin
+  ./dspmq
+  [directfn@ANBC-NTP-QA-SVR01 bin] $ ./dspmq
+  QMNAME(lahiru)                                            STATUS(Ended unexpectedly)
+  QMNAME(QM1)                                               STATUS(Ended unexpectedly)
+  QMNAME(MBSHQM)                                            STATUS(Ended unexpectedly)
+  QMNAME(PRICEQM)                                           STATUS(Ended unexpectedly)
+  QMNAME(B2BQM)                                             STATUS(Ended unexpectedly)
+  these queue managers has queues. websphere is connecting to those queues.
 
-
+from websphere:
+  http://<IP>:9061/ibm/console > Servers > Server Types> WevSphere application servers> select the server> Communications > Messaging > Message listener service > Listener Ports
