@@ -41,4 +41,14 @@ check the queue managers:
   these queue managers has queues. websphere is connecting to those queues.
 
 from websphere:
+1. create a que connection factory( Connection Factory JNDI name):
+  http://<IP>:9061/ibm/console > Resources > JMS > New
+  add queue manager ip,port, channel name
+  'RemoteQueueConnectionFactory' should be there in all env 127.0.0.1:7276:BootstrapBasicMessaging
+2. create the que (Destination JNDI name):
+  http://<IP>:9061/ibm/console > Resources > JMS > Queues
+3. Create the listner queue
   http://<IP>:9061/ibm/console > Servers > Server Types> WevSphere application servers> select the server> Communications > Messaging > Message listener service > Listener Ports
+
+Internal queues:
+  http://<IP>:9061/ibm/console > Resources > JMS > Queues
