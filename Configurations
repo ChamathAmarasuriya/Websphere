@@ -7,6 +7,7 @@ release situated when you deploy it from the consol:
   /home/<name>/app/IBM/WAS9/AppServer/profiles/AppSrv01/installedApps/Cell01
 temp files:
   wstemp,workspace,tranlog,tranlog
+*****************************************************
 start stop scripts:
   cd /home/directfn/app/IBM/WAS9/AppServer/profiles/AppSrv01/bin
   ./stopServer.sh server1
@@ -52,6 +53,3 @@ from websphere:
 
 Internal queues:
   http://<IP>:9061/ibm/console > Resources > JMS > Queues
-
-
-
