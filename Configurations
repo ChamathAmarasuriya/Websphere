@@ -41,6 +41,13 @@ check the queue managers:
   QMNAME(B2BQM)                                             STATUS(Ended unexpectedly)
   these queue managers has queues. websphere is connecting to those queues.
 
+./strmqm lahiru ---> start queue manager
+./endmqm lahiru ---> end queu manager
+./dspmq         ---> display queue manager
+./crtmqm lahiru ---> create queu manager
+./dltmqm lahiru  --> delete que manager
+
+
 from websphere:
 1. create a que connection factory( Connection Factory JNDI name):
   http://<IP>:9061/ibm/console > Resources > JMS > New
