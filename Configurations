@@ -14,7 +14,7 @@ start stop scripts:
   ./startServer.sh server1
   when it starts success, the last msg will be like "Server <name> open for e-business; process id is <PID>"
 
-*************************************************
+*****************************************************
 Server for oms:
   http://<IP>:9061/ibm/console > Servers > Server Types> WevSphere application servers> select the server>
 Application ports:
