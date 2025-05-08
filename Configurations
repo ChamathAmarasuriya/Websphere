@@ -7,12 +7,26 @@ release situated when you deploy it from the consol:
   /home/<name>/app/IBM/WAS9/AppServer/profiles/AppSrv01/installedApps/Cell01
 temp files:
   wstemp,workspace,tranlog,tranlog
-*****************************************************
-start stop scripts:
-  cd /home/directfn/app/IBM/WAS9/AppServer/profiles/AppSrv01/bin
+************************************
+*      start stop scripts          *
+************************************
+cd /home/<name>/app/IBM/WAS9/AppServer/profiles/AppSrv01/bin
   ./stopServer.sh server1
   ./startServer.sh server1
   when it starts success, the last msg will be like "Server <name> open for e-business; process id is <PID>"
+  ex:   ADMU0116I: Tool information is being logged in file
+            /home/<name>/app/IBM/WAS9/AppServer/profiles/AppSrv01/logs/server1/startServer.log
+        ADMU0128I: Starting tool with the AppSrv01 profile
+        ADMU3100I: Reading configuration for server: server1
+        ADMU3200I: Server launched. Waiting for initialization status.
+        ADMU3000I: Server server1 open for e-business; process id is 1697750
+
+logs path:
+/home/<name>/app/IBM/WAS9/AppServer/profiles/AppSrv01/logs/server1
+
+If WSP is not starting related to a deployed release issue,
+  /home/directfn/app/IBM/WAS9/AppServer/profiles/AppSrv01/installedApps/Cell01
+  rename the deployed file. NewGenOMS.ear ---> NewGenOMS_BKP.ear-bkp
 
 *****************************************************
 Server for oms:
@@ -29,7 +43,9 @@ App server config, add falcon, app id, port (JVM properties):
   http://<IP>:9060/ibm/console > Servers > Server Types> WevSphere application servers> select the server> Configurations tab> Server Infrastructure > Process definition > Additional Properties > Java Virtual Machine > Custom properties
   /home/directfn/app/IBM/WAS9/AppServer/profiles/AppSrv01/config/cells/Cell01/nodes/Node01/servers/server1/server.xml , resources.xml
 
-All connectivities:
+*************************************
+*    All connectivities:            *
+*************************************
 check the queue managers:
   cd /opt/mqm/bin
   ./dspmq
