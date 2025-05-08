@@ -75,4 +75,11 @@ from websphere:
   http://<IP>:9060/ibm/console > Servers > Server Types> WevSphere application servers> select the server> Communications > Messaging > Message listener service > Listener Ports
 
 Internal queues:
-  http://<IP>:9060/ibm/console > Resources > JMS > Queues
+  http://<IP>:9060/ibm/console > Resources > JMS > Queues   ----> create queues
+
+Connection Factory
+  http://<IP>:9060/ibm/console > Resources > JMS > Connection Factory ----> new > fill details > test
+Queue Connection Factory
+  http://<IP>:9060/ibm/console > Resources > JMS > Queue connection factories ----> new > fill details > test
+
+
