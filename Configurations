@@ -81,5 +81,11 @@ Connection Factory
   http://<IP>:9060/ibm/console > Resources > JMS > Connection Factory ----> new > fill details > test
 Queue Connection Factory
   http://<IP>:9060/ibm/console > Resources > JMS > Queue connection factories ----> new > fill details > test
+---------------------------------------------------
+
+Check the messages in Queues:
+consol login> resources>JMS>Queues> Select the queue> Buses> Select the bus> Bus Member> select the member> Queue points
+delete queued messages:
+consol login> resources>JMS>Queues> Select the queue> Buses> Select the bus> Destinations> select destination queue > Queue points> go to queue > Runtimes> Messages > select and delete
 
 
