@@ -47,6 +47,7 @@ App server config, add falcon, app id, port (JVM properties):
 *    All connectivities:            *
 *************************************
 check the queue managers:
+(these should be in an MQ server or linux server which has MQ)
   cd /opt/mqm/bin
   ./dspmq
   [directfn@ANBC-NTP-QA-SVR01 bin] $ ./dspmq
