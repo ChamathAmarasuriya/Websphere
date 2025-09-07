@@ -64,7 +64,6 @@ check the queue managers:
 ./crtmqm lahiru ---> create queu manager
 ./dltmqm lahiru  --> delete que manager
 
-
 from websphere:
 1. create a que connection factory( Connection Factory JNDI name):
   http://<IP>:9060/ibm/console > Resources > JMS > New
